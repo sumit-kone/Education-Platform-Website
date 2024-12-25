@@ -3,49 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/career.css">
     <title>Career Guidance</title>
     <style>
-        
+        /* Reset and Body Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ba16c9;
+            background: linear-gradient(to bottom right, #eef2f3, #8e9eab);
             color: #333;
         }
+
+        /* Header Section */
         header {
-            background-color: #a03ab7;
+            background: linear-gradient(to right, #0056b3, #007bff);
             color: white;
             text-align: center;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            animation: fadeIn 2s;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        /* Main Section */
         main {
             padding: 2rem;
         }
         .section-title {
-            font-size: 1.5rem;
-            color: #aa4ac5;
-            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: #0056b3;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            animation: slideIn 1s ease-out;
         }
-        .job-list, .career-opportunities {
-            margin-bottom: 2rem;
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #0056b3;
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
         }
-        .job-item, .career-item {
-            background-color: rgb(137, 45, 129);
-            padding: 1rem;
-            margin: 0.5rem 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        /* Cards Styling */
+        .career-item, .job-item {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            max-width: 700px;
         }
+        .career-item:hover, .job-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        h3 {
+            color: #0056b3;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Footer Styling */
         footer {
-            background-color: #8e1ea5;
+            background: linear-gradient(to right, #0056b3, #007bff);
             color: white;
             text-align: center;
             padding: 1rem 0;
             position: fixed;
             bottom: 0;
             width: 100%;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Button and Hover Effects */
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .career-item::before {
+            content: '\f0b1';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #007bff;
+            margin-right: 8px;
         }
     </style>
 </head>
